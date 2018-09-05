@@ -29,11 +29,11 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 10)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Fork(1)
-public class ComputePerformanceLab {
+public class MapComputePerformanceLab {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(ComputePerformanceLab.class.getSimpleName())
+                .include(MapComputePerformanceLab.class.getSimpleName())
                 .build();
 
         new Runner(opt).run();
@@ -109,13 +109,13 @@ public class ComputePerformanceLab {
 /*
 
 Benchmark                                (mapType)  (numEntries)  (numPuts)  Mode  Cnt       Score       Error  Units
-ComputePerformanceLab.put                  hashMap            30        100  avgt   10    3760.874 ±    20.785  ns/op
-ComputePerformanceLab.put                  hashMap            30      10000  avgt   10  400807.570 ± 26813.583  ns/op
-ComputePerformanceLab.put         object2ObjectMap            30        100  avgt   10    4130.416 ±   242.722  ns/op
-ComputePerformanceLab.put         object2ObjectMap            30      10000  avgt   10  402132.903 ±  3711.605  ns/op
-ComputePerformanceLab.putCompute           hashMap            30        100  avgt   10    3841.238 ±   135.177  ns/op
-ComputePerformanceLab.putCompute           hashMap            30      10000  avgt   10  353745.156 ±  6827.742  ns/op
-ComputePerformanceLab.putCompute  object2ObjectMap            30        100  avgt   10    4379.584 ±   159.552  ns/op
-ComputePerformanceLab.putCompute  object2ObjectMap            30      10000  avgt   10  500795.503 ± 32155.056  ns/op
+MapComputePerformanceLab.put                  hashMap            30        100  avgt   10    3760.874 ±    20.785  ns/op
+MapComputePerformanceLab.put                  hashMap            30      10000  avgt   10  400807.570 ± 26813.583  ns/op
+MapComputePerformanceLab.put         object2ObjectMap            30        100  avgt   10    4130.416 ±   242.722  ns/op
+MapComputePerformanceLab.put         object2ObjectMap            30      10000  avgt   10  402132.903 ±  3711.605  ns/op
+MapComputePerformanceLab.putCompute           hashMap            30        100  avgt   10    3841.238 ±   135.177  ns/op
+MapComputePerformanceLab.putCompute           hashMap            30      10000  avgt   10  353745.156 ±  6827.742  ns/op
+MapComputePerformanceLab.putCompute  object2ObjectMap            30        100  avgt   10    4379.584 ±   159.552  ns/op
+MapComputePerformanceLab.putCompute  object2ObjectMap            30      10000  avgt   10  500795.503 ± 32155.056  ns/op
 
  */

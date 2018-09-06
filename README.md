@@ -1,1 +1,1 @@
-Just mini benchmarks for self.
+Just mini benchmarks for myself.
